@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Hosting</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('ebe5d46001d38592fe845c3bc7ba1b9d.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            animation: fadeIn 2s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            letter-spacing: 1.5px;
+            animation: slideInFromTop 1s ease-in-out;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 15px 5px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #0056b3, #007bff);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.15);
+            transition: all 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: translate(-50%, -50%) rotate(45deg) scale(0);
+        }
+
+        .button:hover::before {
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        }
+
+        .info {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #ddd;
+            animation: slideInFromBottom 1s ease-in-out;
+        }
+
+        .credits {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromBottom {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .info {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Epic Hosting</h1>
+
+        <button class="button" onclick="window.location.href='http://example.com/install-og-fortnite'">Install OG Fortnite Build</button>
+        <button class="button" onclick="window.location.href='http://example.com/install-launcher'">Install Launcher</button>
+        <button class="button" onclick="window.location.href='http://example.com/install-radmin'">Install Radmin</button>
+        <button class="button" onclick="window.location.href='http://example.com/join-discord'">Join Discord Server</button>
+
+        <div class="info">
+            <p>Radmin User: epichosting</p>
+            <p>Radmin Password: epichosting</p>
+        </div>
+    </div>
+
+    <!-- Credits -->
+    <div class="credits">Made by cry</div>
+</body>
+</html>
